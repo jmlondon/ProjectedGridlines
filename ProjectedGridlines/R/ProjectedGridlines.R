@@ -58,7 +58,7 @@
 #' 		tck=c(0,0),
 #' 		cex=0.75)
 #' 
-#' _grat<-list(draw=TRUE,
+#' y_grat<-list(draw=TRUE,
 #' 		at=y_grat_at,
 #' 		labels=as.character(GetDegreeLabels(d)$NS_Labels),
 #' 		rot=90,

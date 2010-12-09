@@ -3,7 +3,7 @@
 #' This function requires the unprojected version of the data (\code{spobj}) and this is used to get the
 #' label text, in decimal degrees, for each of the graticules
 #' 
-#' @param spobj an unrpojected sp object that is the basis of the final projected outcome
+#' @param spobj an unprojected sp object that is the basis of the final projected outcome
 #' @return a list with EW_Labels corresponding to the EW graticules and NS_Labels for NS graticules
 #' @note the function calls \code{gridlines()} and does not specify line loctations, instead relying
 #' on \code{gridlines()} use of \code{pretty()}. Here, there is no use of the \code{ndisc} 
