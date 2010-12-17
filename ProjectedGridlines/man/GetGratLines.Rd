@@ -1,7 +1,7 @@
 \name{GetGratLines}
 \alias{GetGratLines}
 \title{This function creates the projected graticule lines.}
-\usage{GetGratLines(spobj, proj_str, exp_deg, ndisc=500)}
+\usage{GetGratLines(spobj, proj_str, exp_deg, ndisc=500, ...)}
 \description{This function creates the projected graticule lines.}
 \details{Here I use the phrase 'graticule lines' as an attempt to minimize confusion with the existing \code{gridlines} function.
 It essentially calls \code{gridlines()} on the unprojected spatial object (\code{spobj})

@@ -6,8 +6,8 @@ Date: 2010-12-07
 Author: Josh M London
 Maintainer: Josh M London <josh.london@noaa.gov>
 Depends: R (>= 2.4.0), sp, rgdal
-Description: Creates Graticlue Lines for Projected Data with Labels in Decimal Degrees
+Description: Creates Graticlue Lines for Projected Data with Labels in
+    Decimal Degrees
 License: Public Domain
 LazyLoad: yes
 Collate: 'GetDegreeLabels.R' 'GetGratLines.R' 'GetLabelCoords.R'
-    'ProjectedGridlines.R'

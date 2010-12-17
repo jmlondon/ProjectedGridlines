@@ -41,9 +41,9 @@
 #' myProj <- paste("+proj=aea +lat_1=",lat1," +lat_2=",lat2," +lat_0=",med.lat,
 #' 		" +lon_0=", med.lon, "+x_0=0 +y_0=0 +ellps=GRS80 +datum=NAD83 +units=m",sep="")
 #' 
-#' #project the data, the graticule lines. note the gridlines function calls the unprojected data
+#' #project the data and create the graticule lines. note the GetGratLines function calls the unprojected data
 #' d.proj <- spTransform(d,CRS(myProj))
-#' #grat.lines<-spTransform(gridlines(d,ndisc=500),CRS(myProj))
+#'
 #' g<-GetGratLines(d,myProj,list(t=0.25,b=-0.25,l=-0.25,r=0.25))
 #' #create the sp.layout component for the graticule lines
 #' grat.plot<-list("sp.lines",g,lwd="1.5",col="white",first=TRUE)
@@ -73,4 +73,4 @@
 #' 		sp.layout=list(grat.plot),
 #' 		col.regions=brewer.pal(5, "Set3"),scales=list(x=x_grat,y=y_grat))
 #' 
-roxygen()
+#' roxygen()

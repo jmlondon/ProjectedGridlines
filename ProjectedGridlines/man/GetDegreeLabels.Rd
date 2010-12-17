@@ -10,4 +10,4 @@ label text, in decimal degrees, for each of the graticules}
 on \code{gridlines()} use of \code{pretty()}. Here, there is no use of the \code{ndisc} 
 as we're just getting the labels.}
 \author{Josh M London \email{josh.london@noaa.gov}}
-\arguments{\item{spobj}{an unrpojected sp object that is the basis of the final projected outcome}}
+\arguments{\item{spobj}{an unprojected sp object that is the basis of the final projected outcome}}
