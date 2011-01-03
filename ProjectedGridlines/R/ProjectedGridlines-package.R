@@ -73,4 +73,4 @@
 #' 		sp.layout=list(grat.plot),
 #' 		col.regions=brewer.pal(5, "Set3"),scales=list(x=x_grat,y=y_grat))
 #' 
-#' roxygen()
+NULL
