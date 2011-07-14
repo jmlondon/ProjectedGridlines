@@ -10,4 +10,4 @@ Description: Creates Graticlue Lines for Projected Data with Labels in
     Decimal Degrees
 License: Public Domain
 LazyLoad: yes
-Collate: 'GetDegreeLabels.R' 'GetGratLines.R' 'GetLabelCoords.R'
+Collate: 'GetDegreeLabels.R' 'GetGratLines.R' 'GetLabelCoords.R' 'ProjectedGridlines-package.R'
