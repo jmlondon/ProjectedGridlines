@@ -3,9 +3,9 @@
 #' \tabular{ll}{
 #' Package: \tab ProjectedGridlines\cr
 #' Type: \tab Package\cr
-#' Version: \tab 0.1\cr
-#' Date: \tab 2010-12-07\cr
-#' License: \tab Public Domain\cr
+#' Version: \tab 0.2\cr
+#' Date: \tab 2012-02-02\cr
+#' License: \tab Unlimited\cr
 #' LazyLoad: \tab yes\cr
 #' }
 #'

@@ -19,6 +19,7 @@
 #' @param offset a named list with values \code{ew} and {ns} specifying an offset for all labels on the axis
 #' @return a list with EW_Coords corresponding to the EW labels and NS_Coords for NS labels
 #' @author Josh M London \email{josh.london@@noaa.gov}
+#' @export
 GetLabelCoords<-function(gl,offset=list(ew=0,ns=0)){
 	ewc<-coordinates(gl["EW"]@lines[[1]])
 	nsc<-coordinates(gl["NS"]@lines[[1]])
