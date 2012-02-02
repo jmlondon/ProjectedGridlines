@@ -19,6 +19,8 @@
 #' on \code{gridlines()} use of \code{pretty()}. It does specify a default \code{ndisc=500} for nicer 
 #' looking lines when projected.
 #' @author Josh M London \email{josh.london@@noaa.gov}
+#' @export
+
 GetGratLines<-function(spobj,proj_str,exp_deg,ndisc=500,...){
 	spobj@bbox[1,1]<-spobj@bbox[1,1]+exp_deg$l
 	spobj@bbox[1,2]<-spobj@bbox[1,2]+exp_deg$r

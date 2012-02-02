@@ -1,13 +1,20 @@
 Package: ProjectedGridlines
 Type: Package
 Title: Create projected graticules with labels in decimal degrees
-Version: 0.1
-Date: 2010-12-07
+Version: 0.2
+Date: 2012-02-02
 Author: Josh M London
 Maintainer: Josh M London <josh.london@noaa.gov>
-Depends: R (>= 2.4.0), sp, rgdal
+Depends:
+    R (>= 2.12.0),
+    sp,
+    rgdal
 Description: Creates Graticlue Lines for Projected Data with Labels in
     Decimal Degrees
-License: Public Domain
+License: Unlimited
 LazyLoad: yes
-Collate: 'GetDegreeLabels.R' 'GetGratLines.R' 'GetLabelCoords.R' 'ProjectedGridlines-package.R'
+Collate:
+    'GetDegreeLabels.R'
+    'GetGratLines.R'
+    'GetLabelCoords.R'
+    'ProjectedGridlines-package.R'

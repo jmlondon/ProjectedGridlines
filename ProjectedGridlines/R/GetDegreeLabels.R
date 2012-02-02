@@ -9,6 +9,8 @@
 #' on \code{gridlines()} use of \code{pretty()}. Here, there is no use of the \code{ndisc} 
 #' as we're just getting the labels.
 #' @author Josh M London \email{josh.london@@noaa.gov}
+#' @export
+
 GetDegreeLabels<-function(spobj){
 	ewl<-coordinates(gridlines(spobj)["EW"]@lines[[1]])
 	nsl<-coordinates(gridlines(spobj)["NS"]@lines[[1]])

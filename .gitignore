@@ -2,3 +2,8 @@
 /dev
 /ProjectedGridlines_0.1.tar.gz
 .Rproj.user
+*.Rproj
+*.tar.gz
+*.zip
+*.tgz
+
