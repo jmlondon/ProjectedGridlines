@@ -27,12 +27,12 @@ d.proj <- spTransform(d,CRS(myProj))
 coordLim <- bbox(d.proj)
 #grat.lines<-spTransform(gridlines(d,ndisc=500),CRS(myProj))
 grat <- GetGratLines(d,myProj,list(t=0.25,b=-0.25,l=-0.25,r=0.25))
-gratdf <- SpatialLinesDataFrame(grat, data = data.frame(rep(NA, length(g))), match.ID = FALSE)
+gratdf <- SpatialLinesDataFrame(grat, data = data.frame(rep(NA, length(grat))), match.ID = FALSE)
 
 ## Get x, y labels and locations
-x_grat_at<-GetLabelCoords(g,offset=list(ew=0))$EW_Coords
+x_grat_at<-GetLabelCoords(grat,offset=list(ew=0))$EW_Coords
 
-y_grat_at<-GetLabelCoords(g,offset=list(ns=0))$NS_Coords
+y_grat_at<-GetLabelCoords(grat,offset=list(ns=0))$NS_Coords
 
 x_grat<-list(draw=TRUE,
              at=x_grat_at,
@@ -50,13 +50,24 @@ y_grat<-list(draw=TRUE,
 
 
 ggd.proj <- fortify(d.proj, region = "f")
+ggcontour <- fortify(d.proj, region = "NAME")
 gggrat <- fortify(gratdf)
 
 
 ggplot(ggd.proj) +
     geom_polygon(aes(x=long, y=lat, group=group, fill = id)) +
+    geom_polygon(data = ggcontour, aes(x=long, y=lat, group=group), fill = NA, colour = 'black') +
     geom_path(data = gggrat, aes(x=long,y=lat,group=group), col = 'grey', linetype = 'dashed') +
     coord_equal(xlim = coordLim[1,], ylim = coordLim[2,]) +
-    scale_x_discrete(name = 'Lat', breaks = x_grat$at, labels = x_grat$labels) +
-    scale_y_discrete(name = 'Long', breaks = y_grat$at, labels = y_grat$labels) +
+    scale_x_continuous(name = 'Lat', breaks = x_grat$at, labels = x_grat$labels) +
+    scale_y_continuous(name = 'Long', breaks = y_grat$at, labels = y_grat$labels) +
     theme_bw()
+
+ggplot(ggd.proj) +
+    geom_path(data = gggrat, aes(x=long,y=lat,group=group), col = 'white', size = 1) +
+    geom_polygon(aes(x=long, y=lat, group = group, fill = id)) +
+    geom_polygon(data = ggcontour, aes(x=long, y=lat, group=group), fill = NA, colour = 'black') +
+    coord_equal(xlim = coordLim[1,], ylim = coordLim[2,]) +
+    scale_x_continuous(name = 'Lat', breaks = x_grat$at, labels = x_grat$labels) +
+    scale_y_continuous(name = 'Long', breaks = y_grat$at, labels = y_grat$labels) +
+    theme(panel.grid = element_blank(), panel.border = element_rect(colour = "black", fill = NA))
